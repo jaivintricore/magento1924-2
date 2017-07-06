@@ -1,0 +1,45 @@
+<!--@subject Price  Match  Confirmation@-->
+
+<body style="background:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+  <tr>
+    <td align="left" valign="top" style="padding:0">
+      <!-- [ header starts here] -->
+      <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="560" style="margin:0 auto;">
+        <tr>
+          <td colspan="2" valign="top" style="padding:0;">
+            <table cellspacing="0" cellpadding="0" width="100%" style="padding:0 50px;border-bottom:1px solid #d7d7d7;">
+              <tr>
+                <td ><a href="{{store url=""}}" title="{{config path="general/store_information/name"}}"><img src="{{var logo_url}}" alt="{{var logo_alt}}" border="0" width="150px" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="Facebook" href="https://www.facebook.com/" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-fb.png' _area='frontend'}}" alt="Facebook" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="Twitter" href="https://twitter.com/" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-twitter.png' _area='frontend'}}" alt="Twitter" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="RSS" href="https://www.rss.com/" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-rss.png' _area='frontend'}}" alt="RSS" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- [ middle starts here] -->
+        <tr>
+          <td valign="top" colspan="4" bgcolor="#f8f8f8" style="border-bottom:1px solid #d7d7d7;padding:10px 50px;">
+            <p style="font-size:16px;color:#535353;margin: 5px 0 10px;">Dear <b style="font-size:16px;">{{var data.customer_name}}</b>,</p>
+            <p style="font-size:15px;color:#535353;line-height:1.5;margin: 5px 0 10px;">Thank you for your request. We will have a look and respond to you as soon as possible. We appreciate your help for our  store. </p>    
+          </td>
+        </tr>
+        <tr>
+          <td colspan="0" width="1" style="padding: 20px 20px 20px 50px;"><a title="{{var data.product_name}}" href="{{var data.product_url}}"><img src="{{var data.product_image}}" alt="{{var data.product_name}}" style="border:2px solid #7f7f7f;border-radius:2px;" /></a>
+          </td>
+          <td colspan="2" style="padding: 20px 50px 20px 10px;">
+            <h2 style="margin:0 0 15px;"><a style="text-decoration:none;text-transform: uppercase;font-size:15px;color:#f26868;" title="{{var data.product_name}}" href="{{var data.product_url}}">{{var data.product_name}}</a></h2>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 7px;">Our Price: {{var data.product_price}}</p>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 25px;">Your preferred: {{var data.competitor_price}}</p>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 7px;">Thanks Again!</p>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 7px;">{{config path="general/store_information/name"}}</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+</body>

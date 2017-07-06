@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <PriceWaiter_NYPWidget>
+            <active>false</active>
+            <codePool>community</codePool>
+        </PriceWaiter_NYPWidget>
+    </modules>
+</config>

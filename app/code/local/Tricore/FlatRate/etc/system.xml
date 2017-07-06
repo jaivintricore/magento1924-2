@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config>
+	<sections>
+		<carriers>
+			<groups>
+				<flatrate translate="label">
+					<fields>
+						<free_shipping translate="label">
+							<label>Free Shipping Thresold</label>
+							<frontend_type>text</frontend_type>
+							<validate>validate-number validate-zero-or-greater</validate>
+							<sort_order>98</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</free_shipping>
+					</fields>
+				</flatrate>
+			</groups>
+		</carriers>
+	</sections>
+</config>

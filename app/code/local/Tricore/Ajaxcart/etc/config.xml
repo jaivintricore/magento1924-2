@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tricore_Ajaxcart>
+            <version>1.0.0</version>
+        </Tricore_Ajaxcart>
+    </modules>
+    <frontend>
+        <routers>
+            <ajaxcart>
+                <use>standard</use>
+                <args>
+                    <module>Tricore_Ajaxcart</module>
+                    <frontName>ajaxcart</frontName>
+                </args>
+            </ajaxcart>
+        </routers>
+        <layout>
+            <updates>
+                <ajaxcart>
+                    <file>ajaxcart.xml</file>
+                </ajaxcart>
+            </updates>
+        </layout>
+    </frontend>
+</config>

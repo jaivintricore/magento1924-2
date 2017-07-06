@@ -1,0 +1,33 @@
+h3.pricewaiter-header {
+    background: url(images/pricewaiter_logo.png) no-repeat 0 0;
+    height: 0px;
+    overflow: hidden;
+    padding: 50px 0 0 0;
+    margin: 0px;
+    width: 145px;
+}
+
+ul.tabs a.pricewaiter-tab,
+ul.tabs a.pricewaiter-tab:hover {
+    background: url(images/tabs_span_bg.gif) repeat-x 0 100%;
+    border-bottom: none;
+    padding: 0.5em 0.5em 0.28em 1.5em;
+}
+
+ul.tabs a.pricewaiter-tab:hover {
+    background-color: #d8e6e6;
+}
+
+ul.tabs a.pricewaiter-tab.active,
+ul.tabs a.pricewaiter-tab.active:hover {
+    background-color: #fff;
+}
+
+ul.tabs a.pricewaiter-tab span,
+ul.tabs a.pricewaiter-tab:hover span {
+    background: url(images/pricewaiter_tab.png) no-repeat 0 0;
+    height: 0;
+    overflow: hidden;
+    padding: 14px 0 0;
+    width: 300x;
+}

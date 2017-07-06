@@ -1,0 +1,8 @@
+#admin-pagination{border-left: 1px solid rgb(221, 221, 221);border-right: 1px solid rgb(221, 221, 221);padding: 15px;}
+#admin-pagination ol{margin-top: 10px;}
+#admin-pagination ol:after{clear:both;content:"";display:block;}
+#admin-pagination ol li{display: inline-block;padding:0;margin: 0;float: left;background-image: none;border-bottom: 1px solid rgb(230, 230, 230);}
+#admin-pagination ol li a{padding:10px;display:block;}
+#admin-pagination ol li a.previous{padding-left:0;padding-right:5px;}
+#admin-pagination ol li a.next{padding-left:5px;padding-right:0;}
+#admin-pagination ol li.current{padding:10px 5px;}

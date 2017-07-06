@@ -1,0 +1,39 @@
+<?php 
+//check the store config for login user yes/no
+$checkuser = Mage::helper('makeoffer')->getUserConfig();
+
+$checkvar = true;
+
+//check store config for button name
+$Button = Mage::helper('makeoffer')->getOfferButton(); 
+
+//if button name is empty in store config then set the value
+if(!$Button)
+{
+	$Button = "Make An Offer";
+}
+$_product = $this->getProduct();
+
+//check store config for module enable/disable
+if(Mage::getStoreConfig('makeoffer/general/enable_makeoffer')):?>
+	<?php 
+	if($checkuser)
+	{
+	$checkvar = false;
+	if(Mage::helper('customer')->isLoggedIn())
+	{
+		$checkvar = true;
+	}
+}
+if($checkvar)
+{
+?>
+<span class="or-seperator"><?php echo Mage::helper('core')->quoteEscape($this->__('OR')); ?></span>
+<button type="button" id="profile1" class="button"  href="<?php echo Mage::getBaseUrl().'makeoffer/index/index/product_id/'.$_product->getId(); ?>" ><span><?php echo $Button; ?></span></button>
+
+
+<?php 
+}
+endif;
+?>
+

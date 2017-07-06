@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <checkout_cart_index>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/ajaxcart/ajax.css</stylesheet>
+            </action>
+            <action method="addItem">
+                <type>js</type>
+                <name>ajaxcart/ajaxcart.js</name>
+            </action>
+            <block type="core/template" name="base-url">
+                <action method="setTemplate">
+                    <template>ajaxcart/base-url.phtml</template>
+                </action>
+            </block>
+        </reference>  
+    </checkout_cart_index>
+   
+    <ajaxcart_index_deletecart>
+        <update handle="checkout_cart_index"/>
+    </ajaxcart_index_deletecart>
+
+    <ajaxcart_index_deleteall>
+        <update handle="checkout_cart_index"/>
+    </ajaxcart_index_deleteall>
+
+    <ajaxcart_index_update>
+        <update handle="checkout_cart_index"/>
+    </ajaxcart_index_update>
+</layout>

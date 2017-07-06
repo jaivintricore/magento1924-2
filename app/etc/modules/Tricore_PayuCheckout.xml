@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Tricore_PayuCheckout>
+      <active>true</active>
+      <codePool>community</codePool>
+    </Tricore_PayuCheckout>
+  </modules>
+</config>

@@ -1,0 +1,41 @@
+<!--@subject Price  Match  Request  Was  Rejected@-->
+
+<body style="background:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+  <tr>
+    <td align="left" valign="top" style="padding:0">
+      <!-- [ header starts here] -->
+      <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="560" style="margin:0 auto;">
+        <tr>
+          <td colspan="2" valign="top" style="padding:0;">
+            <table cellspacing="0" cellpadding="0" width="100%" style="padding:0 50px;border-bottom:1px solid #d7d7d7;">
+              <tr>
+                <td ><a href="{{store url=""}}" title="{{config path="general/store_information/name"}}"><img src="{{var logo_url}}" alt="{{var logo_alt}}" border="0" width="150px" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="Facebook" href="https://facebook.com" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-fb.png' _area='frontend'}}" alt="Facebook" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="Twitter" href="https://twitter.com" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-twitter.png' _area='frontend'}}" alt="Twitter" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="RSS" href="https://rss.com" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-rss.png' _area='frontend'}}" alt="RSS" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- [ middle starts here] -->
+        <tr>
+          <td valign="top" colspan="4" bgcolor="#f8f8f8" style="border-bottom:1px solid #d7d7d7;padding:10px 50px;">
+            <p style="font-size:16px;color:#535353;margin: 5px 0 10px;">Dear <b style="font-size:16px;">{{var data.customer_name}}</b>,</p>
+            <p style="font-size:15px;color:#535353;line-height:1.5;margin: 5px 0 10px;">Thank you for your price match request. Unfortunately, after having a look at your information, we cannot match your price for this product. If you have any further questions, please do not hesitate to contact us. We are very sorry for the inconvenience.</p>
+            <p style="color:#6a6a6a;margin:0 0 10px;font-size:12px;text-align:center;"><i>{{var data.additional_message}}</i></p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding:10px 50px;">
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 5px;text-align:right;">Best Regards,</p>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 5px;text-align:right;">{{config path="general/store_information/name"}}</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+</body>

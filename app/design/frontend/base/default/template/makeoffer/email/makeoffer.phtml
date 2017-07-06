@@ -1,0 +1,65 @@
+<?php
+		$product_id = $this->getRequest()->getParam('product_id_');
+		$obj = Mage::getModel('catalog/product');
+		$_product        = $obj->load($product_id);
+		$product_url = $_product->getProductUrl();
+		$_productname    = $_product->getName();
+		$_productsku     = $_product->getSku();
+		$_productprice   = Mage::helper('core')
+		->currency($_product->getFinalPrice(),true,false);
+
+		$params = $this->getRequest()->getParams();
+		$fname = $params['fname'];
+		$lname = $params['lname'];
+		$Email = $params['email'];
+		$Telephone= $params['telephone'];	
+		$Comment = $params['comment'];	
+		$_symbols = Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol();
+		$Offer_Price = $_symbols.$params['offerprice'];
+		$Product_Sku = $_productsku;
+		
+
+?>
+<table border="0">
+    <tr>
+        <td align="left">
+            <h1>Hello,<?php echo $fname.$lname ?></h1>
+            
+        </td>
+    </tr>
+    <tr>
+	    <td>We received your offer, We will get back to you on your contact details provided.</td>
+	</tr>
+	
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+   </tr>
+	
+</table>
+<table border="1" cellpadding="1" cellspacing="1" class="action-content" >
+    
+     <?php if(Mage::getStoreConfig('makeoffer/fieldset/enable_fname')):?> 
+    <tr class="fieldhidden"><td style="line-height: 25px; text-align: center;">First Name:</td><td style="line-height: 25px; text-align: left;"><b>&nbsp;&nbsp;<?php echo $fname ?></b></td></tr>
+    <?php endif;?>
+
+    <?php if(Mage::getStoreConfig('makeoffer/fieldset/enable_lname')):?> 
+    <tr><td style="line-height: 25px; text-align: center;">Last Name:</td><td style="line-height: 25px; text-align: left;"> <b>&nbsp;&nbsp;<?php echo $lname ?></b></td></tr>
+	<?php endif;?>
+
+    <tr><td style="line-height: 25px; text-align: center;">Email: </td><td style="line-height: 25px; text-align: left;"><b>&nbsp;&nbsp;<?php echo $Email ?></b></td></tr>
+
+ 	<?php if(Mage::getStoreConfig('makeoffer/fieldset/enable_number')):?> 
+    <tr><td style="line-height: 25px; text-align: center;">Telephone: </td><td style="line-height: 25px; text-align: left;"><b>&nbsp;&nbsp;<?php echo $Telephone ?></b></td></tr>
+    <?php endif;?>
+
+    <tr><td style="line-height: 25px; text-align: center;">Comment: </td><td style="line-height: 25px; text-align: left;"><b>&nbsp;&nbsp;<?php echo $Comment ?></b></td></tr>
+
+    <tr><td style="text-decoration: none; line-height: 25px; text-align: center; ">Product Name: </td><td style="line-height: 25px; text-align: left;"><b>&nbsp;&nbsp;<a href="<?php echo $product_url ?>" style="text-decoration: none;" ><?php echo $_productname; ?></a></b></td></tr>
+
+    <tr><td style="line-height: 25px; text-align: center;">Product Price:</td><td style="line-height: 25px; text-align: left;"> <b>&nbsp;&nbsp;<?php echo $_productprice ?></b></td></tr>
+    <tr><td style="line-height: 25px; text-align: center;">Offer Price: </td><td style="line-height: 25px; text-align: left;"><b>&nbsp;&nbsp;<?php echo $Offer_Price ?></b></td></tr>
+
+    
+    <tr><td style="line-height: 25px; text-align: center;">Product Sku: </td><td style="line-height: 25px; text-align: left;"><b>&nbsp;&nbsp;<?php echo $Product_Sku ?></b></td></tr>
+   	
+</table>

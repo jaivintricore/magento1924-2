@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+	  <Tricore_Addresspager>
+		   <active>true</active>
+		   <codePool>local</codePool>
+	  </Tricore_Addresspager>
+	</modules>
+</config>

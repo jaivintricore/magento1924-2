@@ -1,0 +1,129 @@
+<?php if(Mage::getStoreConfig('makeoffer/general/enable_makeoffer')):?>
+<?php 
+    
+    // get the url from helper function
+    $mail_url = Mage::helper('makeoffer')->getFormAction();
+
+    //get the product data
+    $_product = $this->getProduct();
+    $formattedPrice = Mage::helper('core')
+    ->currency($_product->getFinalPrice(),true,false);
+    $productid = $_product->getId();
+
+    // Load the customer's data
+    if (Mage::getSingleton('customer/session')->isLoggedIn()) 
+    {
+        $customer = Mage::getSingleton('customer/session')->getCustomer();
+        $fname = $customer->getFirstname(); // First Name
+        $lname = $customer->getLastname(); // Last Name
+        $email = $customer->getEmail(); // Email
+    }
+    
+?>
+
+<div class="overlay"></div>
+<div class="popup">
+    <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif')?>" class="loaderajax"/>
+     <div class="formheading">
+        <?php
+        $formheading = Mage::helper('makeoffer')->getFormHead();
+        if(Mage::getStoreConfig('makeoffer/button_name/form_heading'));
+        echo '<b>'.$formheading.'</b>'; ?>
+    </div>
+        <form action="<?php echo $mail_url?>"  id="makeofferForm" method="post"  class="makeofferForm">
+            <div class="fieldsetform">
+                <ul class="form-list">
+                    <li class="fields">
+                        <?php if(Mage::getStoreConfig('makeoffer/fieldset/enable_fname')):?>
+                        <div class="formfield">
+                            <label for="fname" class="required"><em>*</em><?php echo Mage::helper('core')->quoteEscape($this->__('First Name')); ?></label>
+                            <div class="input-box">
+                                <input name="fname" id="fname"  value="<?php echo $fname?>" class="input-text required-entry" required type="text" />
+                            </div>
+                        </div>
+
+                        <?php endif;?>
+                        <?php if(Mage::getStoreConfig('makeoffer/fieldset/enable_lname')):?>
+                        <div class="formfield">
+                            <label for="lname" class="required"><em>*</em><?php echo Mage::helper('core')->quoteEscape($this->__('Last Name')); ?></label>
+                            <div class="input-box">
+                                <input name="lname" id="lname"  value="<?php echo $lname?>" class="input-text required-entry" required type="text" />
+                            </div>
+                        </div>
+                        <?php endif;?>
+                        
+                        <div class="formfield">
+                            <label for="email" class="required"><em>*</em><?php echo Mage::helper('core')->quoteEscape($this->__('Email')); ?></label>
+                            <div class="input-box">
+                                <input name="email" id="email"  value="<?php echo $email?>" class="input-text required-entry validate-email" required type="email" autocapitalize="off" autocorrect="off" spellcheck="false" />
+                            </div>
+                        </div>
+                       
+                        <?php if(Mage::getStoreConfig('makeoffer/fieldset/enable_number')):?>
+                        <div class="formfield">
+                            <label for="telephone" class="required"><em>*</em><?php echo Mage::helper('core')->quoteEscape($this->__('Phone Number')); ?></label>
+                            <div class="input-box">
+                                <input name="telephone" id="telephone"  value="<?php echo $number?>" required class="input-text required-entry" type="tel" />
+                            </div>
+                        </div>
+                        <?php endif;?>
+
+                        <div class="formfield">
+                            <label for="productname"><?php echo Mage::helper('core')->quoteEscape($this->__('Product Name')); ?></label>
+                            <div class="input-box">
+                                <input disabled name="productname" id="productname"  value="<?php echo Mage::helper('core')->quoteEscape($this->__($_product->getName())); ?>" class="input-text required-entry" required type="text" />
+                            </div>
+                        </div>
+                         <?php if(Mage::getStoreConfig('makeoffer/fieldset/enable_sku')):?>
+                        <div class="formfield">
+                            <label for="productsku"><?php echo Mage::helper('core')->quoteEscape($this->__('Product SKU')); ?></label>
+                            <div class="input-box">
+                                <input disabled name="productsku" id="productsku"  value="<?php echo Mage::helper('core')->quoteEscape($this->__($_product->getSku())); ?>" class="input-text required-entry" required type="text" />
+                            </div>
+                        </div>
+                         <?php endif;?>
+
+                        <div class="formfield">
+                            <label for="productprice"><?php echo Mage::helper('core')->quoteEscape($this->__('Current Price ('.Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol().')')); ?></label>
+                            <div class="input-box">
+                                <input disabled name="productprice" id="productprice"  value="<?php echo $formattedPrice ?>" class="input-text" type="text" />
+                            </div>
+                        </div>
+
+                        <div class="formfield">
+                            <label for="offerprice" class="required"><em>*</em><?php echo Mage::helper('core')->quoteEscape($this->__('Offer Price ('.Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol().')')); ?></label>
+                            <div class="input-box">
+                                <input name="offerprice" id="offerprice"  value="" class="input-text required-entry" required type="number" />
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <li class="commentbox">
+                        <div class="formfieldcomment">
+                        <label class="labelcom" for="comment"><?php echo Mage::helper('core')->quoteEscape($this->__('Comments')); ?></label>
+                        <div class="input-box">
+                            <textarea name="comment" id="comment"  class="input-text" ></textarea>
+                        </div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+            <input name="product_id_" id="product_id"  value="<?php echo $productid; ?>"  type="hidden" />
+
+            <div class="makeoffer-submit">
+               <input type="submit" id="submitform" value="<?php echo Mage::helper('core')->quoteEscape($this->__('Submit')); ?>" class="button" style="padding: 4px  12px !important;"/>
+               <input type="button" value="Close" id="button-close" style="padding: 4px  12px !important;"/>
+           </div>
+       </form>
+</div>
+<!--
+ This is for popup sucsess massage
+-->
+<div class="overlaymsg"></div>
+<div class="popupmsg">
+    <div class="close_popup">
+        <div class="mymassage"></div>
+            <input type="button" value="Close" id="msg-close" style="padding: 4px  12px !important;"/>
+    </div>
+</div>
+<?php endif;?>

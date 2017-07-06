@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<!-- processing controller Called -->
+	<paytm_processing_redirectpaytm>
+		<reference name="root">
+			<action method="setTemplate"><template>paytm/blank.phtml</template></action>
+		</reference>
+		<reference name="content">
+			<block type="paytm/redirect" name="paytm_redirect" template="paytm/redirect.phtml" />
+		</reference>
+	</paytm_processing_redirectpaytm>
+</layout>

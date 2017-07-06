@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Tricore_MakeOffer>
+			<version>0.0.1</version>
+		</Tricore_MakeOffer>
+	</modules>
+	<frontend>
+		<routers>
+			<routeurfrontend>
+				<use>standard</use>
+				<args>
+					<module>Tricore_MakeOffer</module>
+					<frontName>makeoffer</frontName>
+				</args>
+			</routeurfrontend>
+		</routers>
+		<layout>
+			<updates>
+				<makeoffer>
+					<file>makeoffer.xml</file>
+				</makeoffer>
+			</updates>
+		</layout>
+	</frontend>
+	<global>
+		<helpers>
+			<makeoffer>
+				<class>Tricore_MakeOffer_Helper</class>
+			</makeoffer>
+		</helpers>
+		<template>
+			<email>
+				<makeoffer_email_template translate="label" module="makeoffer">
+					<label>Make an offer email template</label>
+					<file>make_an_offer.html</file>
+					<type>html</type>
+				</makeoffer_email_template>
+			</email>
+		</template>
+	</global>
+	<default>
+		<makeoffer>
+			<general>
+				<enable_makeoffer>1</enable_makeoffer>
+			</general>
+			<fieldset>
+				<enable_fname>1</enable_fname>
+				<enable_lname>1</enable_lname>
+				<enable_number>1</enable_number>
+				<enable_sku>0</enable_sku>
+			</fieldset>
+			<button_name>
+				<button><![CDATA[Make An Offer]]></button>
+				<form_heading><![CDATA[]]></form_heading>
+			</button_name>
+			<email>
+				<copy_mail><![CDATA[]]></copy_mail>
+			</email>
+		</makeoffer>
+	</default>	
+</config>

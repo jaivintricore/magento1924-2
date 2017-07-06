@@ -1,0 +1,9 @@
+<?xml version = "1.0"?>
+<config>
+	<modules>
+		<Tricore_MakeOffer>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Tricore_MakeOffer>
+	</modules>
+</config>

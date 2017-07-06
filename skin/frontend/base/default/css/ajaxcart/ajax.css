@@ -1,0 +1,23 @@
+/*this is for ajax loader*/
+#AjaxCartLoader 
+{
+    position: fixed; 
+    text-align: center; 
+    z-index: 9999; color: 
+    black; overflow: auto; 
+    min-height: 50px; 
+    min-width: 26px; 
+    display:none; 
+    left: 43%; 
+    top: 40%; 
+    padding: 0px; 
+    width: auto; 
+    height: auto; 
+    margin-left: auto; 
+    margin-right: auto;'
+}
+/*this is to hide update button*/
+.product-cart-actions .button.btn-update
+{
+    display: none !important;
+}

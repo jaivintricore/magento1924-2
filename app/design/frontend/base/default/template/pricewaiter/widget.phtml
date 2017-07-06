@@ -1,0 +1,15 @@
+<?php
+
+$embed = $this->getEmbed();
+
+if ($embed->shouldRenderButtonPlaceholder()) {
+    echo '
+        <div
+            class="name-your-price-widget"
+            style="display: block; clear: both; padding-top: 10px;">
+            <span id="pricewaiter"></span>
+        </div>
+    ';
+}
+
+echo implode(PHP_EOL, $embed->getScriptTags());

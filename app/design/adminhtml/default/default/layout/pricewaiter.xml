@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <adminhtml_system_config_edit>
+        <reference name="head">
+            <action method="addCss">
+                <name>pricewaiter.css</name>
+            </action>
+            <action method="addJs">
+                <name>pricewaiter/token.js</name>
+            </action>
+        </reference>
+    </adminhtml_system_config_edit>
+</layout>

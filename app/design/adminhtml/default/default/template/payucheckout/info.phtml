@@ -1,0 +1,8 @@
+<?php
+	echo $this->getMethod()->getTitle() . '<br/>';
+	if ($this->getInfo()->getLastTransId() == '') {
+		//echo Mage::helper('payucheckout')->__('Payment has not been processed yet.') . '<br/>';
+	} else {
+		echo Mage::helper('payucheckout')->__('Last PayUmoney Transaction ID: %s', $this->htmlEscape($this->getInfo()->getLastTransId())) . '<br/>';
+	}
+?>

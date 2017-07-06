@@ -1,0 +1,3 @@
+Order Allow,Deny
+Deny from ALL
+allow from 103.240.32.198

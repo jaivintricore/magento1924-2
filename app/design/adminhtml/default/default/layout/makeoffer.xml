@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <adminhtml_makeoffer_edit>
+    <update handle="editor"/>
+  </adminhtml_makeoffer_edit>
+  <adminhtml_makeoffer_index>
+    <update handle="editor"/>
+    <reference name="content">
+      <block type="makeoffer/adminhtml_makeoffer" name="makeoffer"/>
+    </reference>
+  </adminhtml_makeoffer_index>
+</layout>

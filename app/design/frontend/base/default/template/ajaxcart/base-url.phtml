@@ -1,0 +1,11 @@
+<?php
+/**
+ * Check for url secure or unsecure
+ */
+    $base_url = Mage::getUrl('',array('_secure' => Mage::App()->getStore()->isCurrentlySecure()));
+?>
+
+<div id='AjaxCartLoader'>
+    <img id='loaderGif' src='<?php echo $this->getSkinUrl('images/ajaxcart/ajax-loader-tr.gif') ?>'>
+</div>
+<input type="hidden" name="base_url" id="base_url" value="<?php echo $base_url?>"/>

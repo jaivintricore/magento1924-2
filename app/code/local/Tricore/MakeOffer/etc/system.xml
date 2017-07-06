@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <makeoffer translate="label">
+            <label>Tricore</label>
+            <sort_order>150</sort_order>
+        </makeoffer>
+    </tabs>
+    <sections>
+        <makeoffer translate="label" module="makeoffer">
+            <label>Make Offer Settings</label>
+            <tab>makeoffer</tab>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label comment">
+                    <label>General</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable_makeoffer>
+                          <label>Enable Make An Offer</label>
+                          <frontend_type>select</frontend_type>
+                          <comment>Select Yes For Enable.</comment> 
+                          <source_model>adminhtml/system_config_source_yesno</source_model>
+                          <sort_order>1</sort_order>
+                          <show_in_default>1</show_in_default>
+                          <show_in_website>1</show_in_website>
+                          <show_in_store>1</show_in_store>
+                      </enable_makeoffer>
+                  </fields>
+              </general>
+              <button_name translate="label">
+                  <label>Button Name</label>
+                  <frontend_type>text</frontend_type>
+                  <sort_order>2</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+                  <fields>
+                    <button>
+                      <label>Button</label>
+                      <frontend_type>text</frontend_type>
+                      <comment>Button Name To Display.</comment> 
+                      <sort_order>2</sort_order>
+                      <show_in_default>1</show_in_default>
+                      <show_in_website>1</show_in_website>
+                      <show_in_store>1</show_in_store>
+                  </button>
+                  <form_heading>
+                      <label>Heading</label>
+                      <frontend_type>text</frontend_type>
+                      <comment>Heading For Form.</comment> 
+                      <sort_order>3</sort_order>
+                      <show_in_default>1</show_in_default>
+                      <show_in_website>1</show_in_website>
+                      <show_in_store>1</show_in_store>
+                  </form_heading>
+              </fields>
+          </button_name>
+          <fieldset translate="label comment">
+            <label>Enable/Disable Fields</label>
+            <sort_order>50</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <fields>
+                <enable_fname>
+                  <label>First Name</label>
+                  <frontend_type>select</frontend_type>
+                  <source_model>adminhtml/system_config_source_yesno</source_model>
+                  <sort_order>0</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </enable_fname>
+              <enable_lname>
+                  <label>Last Name</label>
+                  <frontend_type>select</frontend_type>
+                  <source_model>adminhtml/system_config_source_yesno</source_model>
+                  <sort_order>1</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </enable_lname>
+              <enable_number>
+                  <label>Mobile Number</label>
+                  <frontend_type>select</frontend_type>
+                  <source_model>adminhtml/system_config_source_yesno</source_model>
+                  <sort_order>2</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </enable_number>
+              <enable_sku>
+                  <label>Sku</label>
+                  <frontend_type>select</frontend_type>
+                  <source_model>adminhtml/system_config_source_yesno</source_model>
+                  <sort_order>3</sort_order>
+                  <show_in_default>1</show_in_default>
+                  <show_in_website>1</show_in_website>
+                  <show_in_store>1</show_in_store>
+              </enable_sku>
+          </fields>
+      </fieldset>
+      <email translate="label">
+          <label>Email</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>4</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <email_sender>
+              <label>Email Sender</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_email_identity</source_model>
+              <comment>Select Your Email Sender.</comment>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+          </email_sender>
+          <template translate="label">
+              <label>Email Template</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_email_template</source_model>
+              <comment>Select Your Email Template.</comment>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </template>
+            <copy_mail translate="label">
+              <label>Email Copy To</label>
+              <frontend_type>Text</frontend_type>
+              <comment>Comma-separated.</comment>
+              <sort_order>7</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+            </copy_mail>
+        </fields>
+      </email>
+      <user translate="label">
+          <label>User Selection</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>4</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <fields>
+            <login_user>
+              <label>Only For Log In User</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+          </login_user>
+        </fields>
+      </user>
+</groups>
+</makeoffer>
+</sections>
+</config>

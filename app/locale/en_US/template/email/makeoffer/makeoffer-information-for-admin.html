@@ -1,0 +1,45 @@
+<!--@subject New  Price  Match  Request.@-->
+
+<body style="background:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<div style="background:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:0; padding:0;">
+<table cellspacing="0" cellpadding="0" border="0" height="100%" width="100%">
+  <tr>
+    <td align="left" valign="top" style="padding:0">
+      <!-- [ header starts here] -->
+      <table bgcolor="FFFFFF" cellspacing="0" cellpadding="10" border="0" width="560" style="margin:0 auto;">
+        <tr>
+          <td colspan="2" valign="top" style="padding:0;">
+            <table cellspacing="0" cellpadding="0" width="100%" style="padding:0 50px;border-bottom:1px solid #d7d7d7;">
+              <tr>
+                <td ><a href="{{store url=""}}" title="{{config path="general/store_information/name"}}"><img src="{{var logo_url}}" alt="{{var logo_alt}}" border="0" width="150px" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="Facebook" href="https://www.facebook.com/" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-fb.png' _area='frontend'}}" alt="Facebook" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="Twitter" href="https://twitter.com/" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-twitter.png' _area='frontend'}}" alt="Twitter" /></a></td>
+                <td style="border-left:1px solid #d7d7d7;text-align:center;width:1px;padding:7px 16px;"><a title="RSS" href="https://www.rss.com/" ><img border="0" src="{{skin url='tricore/makeoffer/images/email/makeoffer-rss.png' _area='frontend'}}" alt="RSS" /></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- [ middle starts here] -->
+        <tr>
+          <td valign="top" colspan="4" bgcolor="#f8f8f8" style="border-bottom:1px solid #d7d7d7;padding:10px 50px;">
+            <p style="font-size:15px;color:#535353;margin: 0 0 10px;">Hi,</p>
+            <p style="font-size:15px;color:#535353;line-height:1.5;margin:0">You have received a new price match request. Below is information about this request: </p>    
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 25px 10px 25px 50px;" width="50%">
+            <h2 style="margin:0 0 15px;"><a style="text-decoration:none;text-transform: uppercase;font-size:15px;color:#f26868;" title="{{var data.product_name}}" href="{{var data.product_url}}">{{var data.product_name}}</a></h2>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 7px;">Price: {{var data.product_price}}</p>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 7px;">Request Price: {{var data.competitor_price}}</p>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 25px;">Customer Name: <b style="font-size:12px;">{{var data.customer_name}}</b></p>
+            <p style="color:#6a6a6a;font-size:12px;margin: 0 0 7px;">Please <a style="color:#378ad0;" href="{{var data.admin_url}}" title="log into your admin panel">log into your admin panel</a> to <a style="color:#378ad0;" href="{{var data.admin_url}}" title="approve / reject">approve / reject</a> this request</p>
+          </td>
+          <td><a title="{{var data.product_name}}" href="{{var data.product_url}}"><img src="{{var data.product_image}}" border="0" alt="{{var data.product_name}}" style="border:2px solid #7f7f7f;border-radius:2px;" /></a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+</body>

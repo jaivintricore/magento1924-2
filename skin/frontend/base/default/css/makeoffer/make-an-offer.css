@@ -1,0 +1,300 @@
+.formheading {
+    margin: 2% 0% -1% -4%;
+    text-align: center;
+    /*margin: 0% 41%;*/
+}
+form#makeofferForm {
+    overflow-x: hidden;
+}
+.overlay {
+    opacity: 0.5;
+    background-color: #555454;
+    display: none;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-color: 
+    opacity:0.80;
+    z-index:5;
+}
+.popup {
+    overflow: overlay;
+    border: 15px solid;
+    display: none;
+    top:10%;
+    left:21%;
+    width: 59%;
+    background-color:#FDFDFD;
+    position:fixed;
+    border-radius:5px;
+    z-index:6;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:0px 0px 10px 3px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 10px 3px rgba(50, 50, 50, 0.75);
+}
+img.loaderajax {
+    display: none;
+   left : 48%;
+    top : 50%;
+    position : absolute;
+    z-index : 101;
+    width : 32px;
+    height : 32px;
+    margin-left : -16px;
+    margin-top : -16px;
+   
+}
+label.labelcom {
+    width: 100%;
+    margin: 5px 7px;
+}
+#makeofferForm .formsubmit
+{
+	width:15%;
+}
+
+#makeofferForm #button-close{
+	background: #3399cc;
+    display: inline-block;
+    padding: 7px 15px;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;	
+}
+.close_popup
+{
+ border: 1px solid #D8D8D8; 
+ padding: 10px; 
+ border-radius: 5px; 
+ font-family: Arial; 
+ font-size: 11px; 
+ text-transform: uppercase; 
+ background-color: rgb(236, 255, 216); 
+ color: green; 
+ text-align: center; 
+}
+.popupmsg #msg-close{
+    /*margin: 0% 45%;*/
+    float: none;
+    background: #3399cc;
+    display: inline-block;
+    padding: 7px 15px;
+    border: 0;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+    font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;    
+}
+
+.overlaymsg {
+    opacity: 0.5;
+    background-color: #555454;
+    display: none;
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-color: 
+    opacity:0.80;
+    z-index:5;
+}
+.popupmsg {
+    border: 15px solid;
+    display: none;
+    top:37%;
+    left:25%;
+    width: 50%;
+    background-color:#FDFDFD;
+    position:fixed;
+    border-radius:5px;
+    z-index:6;
+    -webkit-box-shadow: 0px 0px 10px 3px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:0px 0px 10px 3px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 0px 10px 3px rgba(50, 50, 50, 0.75);
+}
+
+.mymassage
+{ 
+ /*border: 1px solid #D8D8D8; */
+ padding: 10px; 
+ border-radius: 5px; 
+ font-family: Arial; 
+ font-size: 11px; 
+ text-transform: uppercase; 
+ background-color: rgb(236, 255, 216); 
+ color: green; 
+ text-align: center; 
+} 
+#makeofferForm .formfield {
+    float: left;
+    width: 46%;
+    margin: 5px 11px;
+}
+.or-seperator{
+	text-align: center;
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+#makeofferForm .makeoffer-submit{
+	margin: 10px 9px;
+}
+#makeofferForm .commentbox{
+	width: 100%;
+    margin: 5px;
+}
+#makeofferForm .commentbox textarea{
+	width: 100%;
+	max-width: 95%;
+    margin: 0px 5px;
+}
+img.closeimg {
+    height: 17px;
+    width: 17px;
+    float: right;
+    /*position: fixed;*/
+    cursor:pointer
+}
+
+/*
+*for responsive
+*/
+@media only screen and (max-width: 1024px){
+#makeofferForm .formfield 
+{
+    float: left;
+    width: 43%;
+}
+#makeofferForm .formfield.input-box 
+{
+    width: 38%;
+}
+#makeofferForm .commentbox textarea
+{
+    max-width: 91%;
+}
+.popup 
+{
+    min-height: 300px;
+    left:25%;
+    width:50%;
+    height:auto;
+    top:0%;
+    position:fixed;
+}
+img.loaderajax {
+    display: none;
+    left : 50%;
+    top : 50%;
+    position : absolute;
+    z-index : 101;
+    width : 32px;
+    height : 32px;
+    margin-left : -16px;
+    margin-top : -16px;
+    }
+}
+
+@media only screen and (max-width: 764px) {
+#makeofferForm .formfield 
+{
+    float: left;
+    width: 42%;
+    margin: 5px 10px;
+}
+#makeofferForm .formfield.input-box 
+{
+    width: 38%;
+}
+#makeofferForm .commentbox textarea
+{
+    max-width: 93%;
+}
+.popup 
+{
+     min-height: 200px;
+    left:23%;
+    width:56%;
+    height:auto;
+    top:0%;
+    position:fixed;
+}
+}
+@media only screen and (max-width: 601px) {
+#makeofferForm .formfield 
+{
+    float: left;
+    width: 42%;
+}
+#makeofferForm .commentbox textarea {
+    max-width: 93%;
+}
+
+#fname,
+#lname,
+#productname,
+#productprice,
+#offerprice,
+#email,
+#telephone,
+#productsku
+{    
+    float: left;
+    width: 97%;
+    max-width: 100%;
+}
+#makeofferForm .formfield.input-box 
+{
+    width: 38%;
+}
+#makeofferForm .formfield.input-box input 
+{
+    width: 38%;
+}
+}
+
+@media only screen and (max-width: 499px) {
+#makeofferForm .formfield 
+{
+    float: left;
+    width: 95%;
+}
+.formheading 
+{
+    text-align: center;
+}   
+}
+
+
+@media only screen and (max-width: 360px){
+
+.popup 
+{
+    left: 21%;
+    width: 62%;
+    height: auto;
+    top: 0%;
+    position: fixed;
+}
+#makeofferForm .formfield 
+{
+    float: left;
+    width: 95%;
+    margin: 4px 6px;
+}
+}

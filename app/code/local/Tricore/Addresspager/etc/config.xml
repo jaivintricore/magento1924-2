@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Tricore_Addresspager>
+			<version>0.1.0</version>
+		</Tricore_Addresspager>
+	</modules>
+
+	<!-- Admin side -->
+	<adminhtml>
+		<layout>
+			<updates>
+				<Tricore_Addresspager>
+					<file>pagination.xml</file>
+				</Tricore_Addresspager>
+			</updates>
+		</layout>
+	</adminhtml>
+
+	<!--frontend Side -->
+	<frontend>
+	   <routers>
+		  <customer>
+			 <use>standard</use>
+			 <args>
+				<modules>
+					<tricore_addresspager before="Mage_Customer">Tricore_Addresspager</tricore_addresspager>
+				</modules>
+			 </args>
+		  </customer>
+	   </routers>
+	   <layout>
+			<updates>
+				<customer module="Mage_Customer">
+					<file>addresspager.xml</file>
+				</customer>
+			</updates>
+		</layout>
+	</frontend>
+
+<!-- Global -->
+	<global>
+        <models>
+            <customer>
+                <rewrite>
+                    <customer>Tricore_Addresspager_Model_Customer</customer>
+                </rewrite>
+            </customer>
+        </models>
+
+		<blocks>
+		  <customer>
+			<rewrite>
+				<address_book>Tricore_Addresspager_Block_Address_Book</address_book>
+			</rewrite>
+		  </customer>
+
+		   <adminhtml>
+				<rewrite>
+				   <customer_edit_tab_addresses>Tricore_Addresspager_Block_Adminhtml_Addresses</customer_edit_tab_addresses>
+				</rewrite>
+		   </adminhtml>
+		</blocks>
+	</global>
+</config>
