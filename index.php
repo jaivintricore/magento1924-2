@@ -70,10 +70,12 @@ if (isset($_SERVER['MAGE_IS_DEVELOPER_MODE'])) {
     Mage::setIsDeveloperMode(true);
 }
 
-ini_set('display_errors', 1);
+ini_set('display_errors', 1); // error enable
 
 umask(0);
-
+#line1
+#line2
+#line3
 /* Store or website code */
 $mageRunCode = isset($_SERVER['MAGE_RUN_CODE']) ? $_SERVER['MAGE_RUN_CODE'] : '';
 
