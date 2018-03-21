@@ -38,6 +38,7 @@ Whoops, it looks like you have an invalid PHP version.</h3></div><p>Magento supp
  * Compilation includes configuration file
  */
 define('MAGENTO_ROOT', getcwd());
+error_reporting(E_ALL & ~E_NOTICE);
 
 $compilerConfig = MAGENTO_ROOT . '/includes/config.php';
 if (file_exists($compilerConfig)) {
