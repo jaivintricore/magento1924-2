@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <tricore translate="label">
+            <label>Tricore</label>
+            <sort_order>400</sort_order>
+        </tricore>
+    </tabs>
+     
+    <sections>
+        <undocart_options translate="label">
+            <label>Undo Cart</label>
+            <tab>tricore</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>				
+				<section_one translate="label">
+					<label>Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>1</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>                
+					<fields>
+						<enabledisable>
+							<label>Enable</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>Make Yes to enable module functionality.</comment>                                              
+						</enabledisable>
+					</fields>
+				</section_one>
+                <section_two translate="label">
+                    <label>Undocart Messages</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>                
+                    <fields>
+						<remove_msg>
+                            <label>Remove Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>When you remove single item. {product name} is for deleted product name.</comment>                           
+                        </remove_msg>
+						<addcart_msg>
+                            <label>Add Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store> 
+                            <comment>When you add back last removed item. {product name} is for added back product name.</comment>                            
+                        </addcart_msg>                
+                        <undotext_msg>
+                            <label>Undo Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Text for undo link. On click of which item added back.</comment>                          
+                        </undotext_msg>                        
+                        <multiremove_msg>
+                            <label>Multiple Remove Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store> 
+                            <comment>When you remove multiple items by making qty 0 and update cart.</comment>                            
+                        </multiremove_msg>
+                        <addmulti_msg>
+                            <label>Multiple Add Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>When you add back multiple items which are removed by making qty 0.</comment>                           
+                        </addmulti_msg>
+                        <multi_undotext_msg>
+                            <label>Multiple Undo Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Text for undo link in case of multiple remove.</comment>                          
+                        </multi_undotext_msg>                   
+                        <emptycart_msg>
+                            <label>Empty Cart Remove</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>When you remove all items from cart by clicking Empty Cart link.</comment>                           
+                        </emptycart_msg>
+                        <add_emptycart_msg>
+                            <label>Empty Cart Add message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>When you add back all items removed by empty cart.</comment>                                                   
+                        </add_emptycart_msg>
+                        <cart_undotext_msg>
+                            <label>Empty Cart Undo Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Undo text for undo all removed item by empty cart.</comment>                          
+                        </cart_undotext_msg>
+                        <error_msg>
+                            <label>Error Message</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Error message if undo cart fails.</comment>                         
+                        </error_msg>                        
+                    </fields>
+                </section_two>
+            </groups>                
+        </undocart_options>
+    </sections>
+</config>
