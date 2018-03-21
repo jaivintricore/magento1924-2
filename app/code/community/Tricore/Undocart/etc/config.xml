@@ -1,0 +1,101 @@
+<?xml version="1.0"?> 
+<config>
+    <modules>
+        <Tricore_Undocart>
+            <version>0.1.0</version>
+        </Tricore_Undocart>
+    </modules>
+	<global>
+		<helpers>
+			<tricore>
+				<class>Tricore_Undocart_Helper</class>
+			</tricore>
+		</helpers>
+		<models>
+			 <tricore>
+				<class>Tricore_Undocart_Model</class>
+			 </tricore>
+	   </models>
+	   <events>	   
+		   <controller_action_predispatch_checkout_cart_updatePost>
+			   <observers>
+					<Tricore_Undocart>
+						<class>Tricore_Undocart_Model_Observer</class>
+						<method>removecartitem</method>
+					</Tricore_Undocart>
+				</observers>
+		   </controller_action_predispatch_checkout_cart_updatePost>
+		   <sales_quote_remove_item>
+			   <observers>
+					<Tricore_Undocart>
+						<class>Tricore_Undocart_Model_Observer</class>
+						<method>removeitem</method>
+					</Tricore_Undocart>
+				</observers>
+		   </sales_quote_remove_item>	
+		   <sales_order_save_after>
+				<observers>
+                    <Tricore_Undocart>
+                        <class>Tricore_Undocart_Model_Observer</class>
+                        <method>salesOrderAfterSave</method>
+                    </Tricore_Undocart>
+                </observers>
+			</sales_order_save_after>	   
+		</events>
+	</global>
+	<frontend>
+		<routers>
+			<undocart>
+				<use>standard</use>
+				<args>
+					<module>Tricore_Undocart</module>
+					<frontName>undocart</frontName>
+				</args>
+			</undocart>
+		</routers>
+	</frontend>
+	<adminhtml>
+			<acl>
+				<resources>
+					<admin>
+						<children>
+							<system>
+								<children>
+									<config>
+										<children>
+											<undocart_options>
+												<title>Undocart Configuration Section</title>
+											</undocart_options>
+										</children>
+									</config>
+								</children>
+							</system>
+						</children>
+					</admin>
+				</resources>
+			</acl>
+	</adminhtml>
+	<default>	     
+		<undocart_options>
+			<section_one>
+				<enabledisable>1</enabledisable> 
+			</section_one>
+			<section_two>                
+				<addcart_msg>{product_name} Added Sucessfully</addcart_msg>
+				<remove_msg>{product_name} removed</remove_msg>
+				<undotext_msg>Undo?</undotext_msg>
+				
+				<multiremove_msg>Some products are removed</multiremove_msg>
+				<addmulti_msg>Cart item(s) Added Sucessfully</addmulti_msg>
+				<multi_undotext_msg>Undo All?</multi_undotext_msg>
+				
+				<add_emptycart_msg>Cart items Added Sucessfully</add_emptycart_msg>
+				<emptycart_msg>Cart item(s) removed</emptycart_msg>
+				<cart_undotext_msg>Undo All?</cart_undotext_msg>
+				
+				<error_msg>Cannot added back item to shopping cart</error_msg>
+					 
+			</section_two>      
+		</undocart_options>
+	</default>	 
+</config>
