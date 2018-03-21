@@ -39,6 +39,201 @@
         <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getChildHtml('accountLinks') ?></p>
     </div>
 </div>
+<?php if (Mage::helper('categorybanner')->canShowBanner()): ?>
+    <?php $bannerData = Mage::helper('categorybanner')->getCategoryBannerData(); ?>
+    <div class="cat_bannermain_sim">
+        <p>
+             <div class="category-sales-banner">
+              <a <?php if($bannerData['cat_img_link']):?> href="<?php echo $bannerData['cat_img_link']?>" <?php endif; ?> >
+                  <img name="imageb" usemap="#planetmap" class="cat_img_sim" src="<?php echo $bannerData['media_path'] . $bannerData['cat_img_url']?>" />
+              </a>
+             </div>
+
+             <div class="category-sales-banner-mobile">
+               <a <?php if($bannerData['cat_img_link']):?> href="<?php echo $bannerData['cat_img_link']?>" <?php endif; ?> >
+                  <img name="imageb" usemap="#planetmap" class="cat_img_sim" src="<?php echo $bannerData['media_path'] . $bannerData['cat_img_url_mobile']?>" />
+               </a>
+             </div>
+
+            <map name="planetmap">
+            <?php if($bannerData['cat_img_link_popup']): ?>
+                <area id="bogo50" shape="rect" coords="<?php echo $bannerData['cat_img_link_popup_mapping_cordinates'] ?>" href="javascript:void(0);">
+            <?php endif; ?>
+            </map>
+			
+			<?php if($bannerData['cat_img_link_popup']): ?>
+                <div class="skinny-popup-details" style="display:none;">
+					<img src="<?php echo $bannerData['base_url']; ?>/skin/frontend/dollskill/dollskill/images/close_black.svg" alt="X" class="shipping-popup-close skinny-popup-close">
+					<img src="<?php echo $bannerData['base_url'] . $bannerData['cat_img_link_popup']?>" hidefocus="true">
+				</div>
+				<script type="text/javascript">
+					function skinny_popup_details(){
+						jQuery(".dimmer, .skinny-popup-close").on('click', function(){
+						   jQuery(".skinny-popup-details, .dimmer").fadeOut(0);
+						})
+						jQuery("#bogo50").on('click', function(){
+						   jQuery("html, body").animate({
+								scrollTop: 0
+							}, 400);
+							jQuery(".skinny-popup-details, .dimmer").fadeIn(0);
+						});
+					}
+					jQuery(document).ready(function(){
+						   skinny_popup_details();
+					});
+				</script>
+				<style>
+					 .skinny-popup-details {
+							background: none repeat scroll 0 0 #000000;
+							height: 515px;
+							padding: 0px;
+							width: 630px;
+							font-weight: normal;
+							z-index: 200;
+							position: absolute;
+							top: 80px;
+							left: 42%;
+							margin-left: -250px;
+						}
+
+						.shipping-popup-close.skinny-popup-close{    position: absolute;    left: 96%;    margin: 10px 0 0 0;}
+				</style>
+            <?php endif; ?>
+			
+			
+            <?php if($bannerData['sales_timer_status']):?>
+                <div class="bannerwrapper"  style="position: relative;">
+                    <div class="timermain minwindowtimer" style="<?php echo $bannerData['timer_pos'];?>">
+                    	<?php $ends_in_text = $bannerData['cat_img_text']; 
+                        	if (!empty($ends_in_text)) { ?>
+                    			<div class="timertext textinline ends_text" style="<?php echo $bannerData['timer_text'];?>"><?php echo $bannerData['cat_img_text'].':'?></div>
+                        <?php } ?>
+						<?php if($bannerData['display_days']) { ?>                        
+	                        <div class="timertext textinline banner-timer" id="dday" style="<?php echo $bannerData['timer_text'];?>"></div>
+	                        <span id="span-dday" style="<?php echo $bannerData['timer_text'];?>" > DAYS, </span>
+                        <?php } ?>
+                        <div class="timertext textinline banner-timer" id="dhour" style="<?php echo $bannerData['timer_text'];?>"></div>
+                        <span style="<?php echo $bannerData['timer_text'];?>" > HRS </span>
+                        <div class="timertext textinline banner-timer" id="dmin" style="<?php echo $bannerData['timer_text'];?>"></div>
+                        <span style="<?php echo $bannerData['timer_text'];?>"> MINS </span>
+                        <div class="timertext textinline banner-timer" id="dsec" style="<?php echo $bannerData['timer_text'];?>"></div>
+                        <span style="<?php echo $bannerData['timer_text'];?>"> SECS </span>
+                    </div>
+                </div>
+                
+                <script type="text/javascript">
+                    var year1 = String(<?php echo $bannerData['sales_timer_date'][2]; ?>);
+                    var month1 = <?php echo $bannerData['sales_timer_date'][0]; ?>;
+                    var day1 = <?php echo $bannerData['sales_timer_date'][1]; ?>;
+                    var hour1 = <?php echo $bannerData['sales_timer_time'][0]; ?>;
+                    var minute1 = <?php echo $bannerData['sales_timer_time'][1]; ?>;
+                    var tz1 = <?php echo $bannerData['tz']; ?>;
+					var showdays = "<?php echo $bannerData['display_days']; ?>";
+                    cattimer(showdays,year1,month1,day1,hour1,minute1,tz1);
+                    console.log(year1,month1,day1,hour1,minute1,tz1);
+                    countdown0(year0,month0,day0,hour0,minute0);
+                </script>
+                <!-- CSS for category banner timer -->
+				<style>
+				.cat_bannermain_sim .timertext.textinline.ends_text{ margin-right: 5px !important }
+				.cat_bannermain_sim .textinline{
+					float: none !important;
+				}
+				.cat_bannermain_sim .timertext{
+					width: inherit;
+				}
+				.cat_bannermain_sim .timermain span{
+					float: none !important;
+					max-width: none !important; 
+					vertical-align: bottom;
+					font-size: 17px !important;
+				}
+				.cat_bannermain_sim .timermain{
+					float: none !important;
+					width: inherit !important;
+					height: inherit !important;
+				}				
+			   	.cat_bannermain_sim .minwindowtimer .banner-timer {
+			   	  	width: 20px;
+			   	  	font-size: 17px !important;
+			   	}
+			   	@media(max-width:1020px){
+					.cat_bannermain_sim .minwindowtimer,
+					.cat_bannermain_sim .minwindowtimer .banner-timer,
+					.cat_bannermain_sim .minwindowtimer span,
+					.cat_bannermain_sim .minwindowtimer .timertext.textinline.ends_text{
+						/*font-size: 15px !important;*/
+					}
+					.cat_bannermain_sim .timermain.minwindowtimer{
+						/*transform: translateX(2%) !important; margin-top: -33px !important;*/
+					}
+					.cat_bannermain_sim .timertext.textinline.ends_text {
+					    margin-right: 2px !important;
+					}					
+				}
+				@media (max-width: 993px) and (min-width: 768px){
+					.cat_bannermain_sim .minwindowtimer.timermain{
+						margin-left: 0 !important;
+						padding-top: 0 !important;
+					}	
+					.cat_bannermain_sim .minwindowtimer .banner-timer {
+				    	width: 23px;
+				    }	
+				    .cat_bannermain_sim .timermain.minwindowtimer {
+					    /*transform: translateX(4%) !important;*/
+					}			
+				}
+				@media(max-width:920px){
+					.cat_bannermain_sim .minwindowtimer .banner-timer {
+					    width: 21px !important;
+					}					
+					.cat_bannermain_sim .minwindowtimer,
+					.cat_bannermain_sim .minwindowtimer .banner-timer,
+					.cat_bannermain_sim .minwindowtimer span,
+					.cat_bannermain_sim .minwindowtimer .timertext.textinline.ends_text{
+						/*font-size: 15px !important;*/
+					}
+					.cat_bannermain_sim .timermain.minwindowtimer {
+					    /*transform: translateX(3%) !important;*/
+					}
+					.cat_bannermain_sim .timermain.minwindowtimer{
+						/*margin-top: -28px !important;*/
+					}
+				}
+				@media (max-width: 800px) and (min-width: 768px){
+					.cat_bannermain_sim .timermain.minwindowtimer {
+					    /*transform: translateX(2%) !important;*/
+					}
+					.cat_bannermain_sim .timermain.minwindowtimer{
+						/*margin-top: -28px !important;*/
+					}
+					.cat_bannermain_sim .minwindowtimer .banner-timer {
+					    width: 19px !important;
+					}
+					.cat_bannermain_sim .minwindowtimer,
+					.cat_bannermain_sim .minwindowtimer .banner-timer,
+					.cat_bannermain_sim .minwindowtimer span,
+					.cat_bannermain_sim .minwindowtimer .timertext.textinline.ends_text{
+						/*font-size: 14px !important;*/
+					}	
+				}
+				@media (max-width: 993px) and (min-width: 768px) {
+					.timermain {
+						margin-left: inherit !important;
+						padding-top: inherit !important;
+					}
+				}
+				
+				@media (max-width: 850px) and (min-width: 768px) {
+					.timermain minwindowtimer {
+						left: 29% !important;
+					}
+				}
+				</style>
+            <?php endif;?>
+        </p>
+    </div>
+<?php endif; ?>
 
 <header id="header" class="page-header">
     <div class="page-header-container">
