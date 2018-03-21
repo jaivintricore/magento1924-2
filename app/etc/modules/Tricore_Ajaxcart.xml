@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Tricore_Ajaxcart>
-			<active>true</active>
+			<active>false</active>
 			<codePool>local</codePool>
 		</Tricore_Ajaxcart>
 	</modules>

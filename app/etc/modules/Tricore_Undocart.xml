@@ -3,7 +3,7 @@
     <modules>
         <Tricore_Undocart>
             <active>true</active>
-            <codePool>local</codePool>
+            <codePool>community</codePool>
         </Tricore_Undocart>
     </modules>
 </config>
