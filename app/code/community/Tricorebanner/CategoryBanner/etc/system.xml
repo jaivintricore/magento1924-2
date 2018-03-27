@@ -1,0 +1,231 @@
+<config>
+    <tabs>
+        <tricorebanner translate="label">
+            <label>Tricore Settings</label>
+            <sort_order>150</sort_order>
+        </tricorebanner>
+    </tabs>
+       <sections>
+        <categorysalesbanner translate="label" module="categorybanner">
+            <label>Category Sales Banner Settings</label>
+            <tab>tricorebanner</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>302</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <enablecategorybanner translate="label">
+                    <label>Category Sales Banner Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>301</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <categorybanner_enable translate="label">
+                            <label>Enable Category Banner</label>
+                            <comment>Disable it to hide Category Sales Banner.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categorybanner_enable>
+                        <exclude_category translate="label">
+                            <label>Exclude Category Ids</label>
+                            <comment>Enter Category Ids in Comma Seprated form to Exclude Category Banner for that Category Page.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </exclude_category>
+                        <display_banner_home translate="label">
+                            <label>Display banner in Home page</label>
+                            <comment>Enable or Disable to display banner in home page.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </display_banner_home>
+                        <display_banner_cart_page translate="label">
+                            <label>Display banner in cart page</label>
+                            <comment>Enable or Disable to display banner in cart page.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </display_banner_cart_page>
+                        <categoryimagetext translate="label">
+                            <label>Image Text</label>
+                            <comment>Keep it empty to hide</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categoryimagetext>
+                        <categoryimagelink translate="label">
+                            <label>Image Link</label>
+                            <comment>Put here Link for Image</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categoryimagelink>
+                        <categoryimagelinkdesktop translate="label">
+                            <label>Sale Banner Image Popup Link for Desktop</label>
+                            <comment>Put here Link for Image Desktop Site. For Ex. /shipping/index.html it will taked dkdev1.dollskill.com/shipping/index.html</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categoryimagelinkdesktop>
+                        <categoryimagelinkcssdesktop translate="label">
+                            <label>Sale banner Image Mapping Cordinates for desktop site</label>
+                            <comment>Put here Link Mapping Cordinates for Image Desktop Site. For ex. 1300,57,1380,25 (X1,Y1,X2,Y2). Cordinate getting link http://www.image-maps.com</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categoryimagelinkcssdesktop>
+                        <categorybannershow translate="label">
+                            <label>Show With Category Banner</label>
+                            <comment><![CDATA[Select Yes to show both category banner as well as skinney banner on category page, <br />If No is selcted then skinney bannner doesn't shown when category images is available.]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </categorybannershow>
+                        <categorybannerimage>
+                            <label>Select Image 1</label>
+                            <frontend_type>image</frontend_type>
+                            <comment>JPG,GIF,PNG</comment>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">images</upload_dir>
+                            <base_url type="media" scope_info="1">images</base_url>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store> 
+                        </categorybannerimage>
+                        <categorybannerimagemobile>
+                            <label>Mobile Banner Image </label>
+                            <frontend_type>image</frontend_type>
+                            <comment>JPG,GIF,PNG</comment>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <upload_dir config="system/filesystem/media" scope_info="1">images</upload_dir>
+                            <base_url type="media" scope_info="1">images</base_url>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store> 
+                        </categorybannerimagemobile>
+                    </fields>
+                </enablecategorybanner>
+           </groups>
+           <groups>
+                <categorytimer_enable translate="label">
+                    <label>Sales Timer Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>305</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <timer_enable translate="label">
+                            <label>Enable Sales Timer</label>
+                            <comment>Disable it to Off Sales Timer.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </timer_enable>
+                        s<product_image_timer translate="label">
+                            <label>Visible on Product Page Banner</label>
+                            <comment>Disable it to Off Sales Timer on Product image.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_image_timer>
+                        <timer_expire translate="label comment">
+                            <label>Timer Expire Date</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>categorybanner/adminhtml_system_config_date</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Set the expiry date for the Sales.</comment>
+                        </timer_expire>
+                        <timer_time translate="label">
+                            <label>End Time</label>
+                            <comment>Enter the count down Time in HH:MM:SS format.</comment>
+                            <frontend_type>time</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </timer_time>
+                        <timer_timezone translate="label">
+                            <label>Timezone</label>
+                            <comment>Enter the Timezone For Sales Count down.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_locale_timezone</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </timer_timezone>
+                        <timer_position_style translate="label">
+                            <label>Style Timer Position</label>
+                            <comment>You can put Style For Timer Position.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </timer_position_style>
+                        <timer_text_style translate="label">
+                            <label>Style Timer Text</label>
+                            <comment>You can put Style For Timer Text</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </timer_text_style>
+						
+						<display_days_timer translate="label">
+                            <label>Show Day in Timer</label>
+                            <comment>D:HH:MM:SS format.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </display_days_timer>
+						
+                    </fields>
+                </categorytimer_enable>
+            </groups>
+        </categorysalesbanner>
+    </sections>
+</config>

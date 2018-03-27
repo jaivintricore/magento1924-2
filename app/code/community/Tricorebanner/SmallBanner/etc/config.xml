@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Tricorebanner_SmallBanner>
+            <version>1.0</version>
+        </Tricorebanner_SmallBanner>
+    </modules>
+    <frontend>
+        <routers>
+            <smallbanner>
+                <use>standard</use>
+                <args>
+                    <module>Tricorebanner_SmallBanner</module>
+                    <frontName>smallbanner</frontName>
+                </args>
+            </smallbanner>
+        </routers>
+        <layout>
+            <updates>
+                <smallbanner>
+                    <file>smallbanner.xml</file>
+                </smallbanner>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <helpers>
+                <smallbanner>
+                    <class>Tricorebanner_SmallBanner_Helper</class>
+                </smallbanner>  
+        </helpers>
+    </global>
+    <default>
+        <smallbanner>
+            <enablesmallbanner>
+                <smallbanner_enable>Disable</smallbanner_enable>
+                <image1text></image1text>
+                <image1link></image1link>
+                <smallbannerimage_1></smallbannerimage_1>
+                <image2text></image2text>
+                <image2link></image2link>
+                <smallbannerimage_2></smallbannerimage_2>
+            </enablesmallbanner>
+        </smallbanner>
+    </default>
+</config>
